@@ -10,6 +10,33 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// layout_with_coulomb_Cpp
+NumericMatrix layout_with_coulomb_Cpp(int pniter, int pvcount, int pecount, NumericVector maxdelta, double parea, double pcoolexp, double prepulserad, double pcoulombrad, IntegerVector Ef, /* Edges from */     IntegerVector Et, /* Edges to */     NumericVector W, NumericVector sizes, NumericVector xInit, NumericVector yInit, LogicalVector Cx, LogicalVector Cy, int digits);
+RcppExport SEXP _qgraph_layout_with_coulomb_Cpp(SEXP pniterSEXP, SEXP pvcountSEXP, SEXP pecountSEXP, SEXP maxdeltaSEXP, SEXP pareaSEXP, SEXP pcoolexpSEXP, SEXP prepulseradSEXP, SEXP pcoulombradSEXP, SEXP EfSEXP, SEXP EtSEXP, SEXP WSEXP, SEXP sizesSEXP, SEXP xInitSEXP, SEXP yInitSEXP, SEXP CxSEXP, SEXP CySEXP, SEXP digitsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type pniter(pniterSEXP);
+    Rcpp::traits::input_parameter< int >::type pvcount(pvcountSEXP);
+    Rcpp::traits::input_parameter< int >::type pecount(pecountSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type maxdelta(maxdeltaSEXP);
+    Rcpp::traits::input_parameter< double >::type parea(pareaSEXP);
+    Rcpp::traits::input_parameter< double >::type pcoolexp(pcoolexpSEXP);
+    Rcpp::traits::input_parameter< double >::type prepulserad(prepulseradSEXP);
+    Rcpp::traits::input_parameter< double >::type pcoulombrad(pcoulombradSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type Ef(EfSEXP);
+    Rcpp::traits::input_parameter< /* Edges from */     IntegerVector >::type Et(EtSEXP);
+    Rcpp::traits::input_parameter< /* Edges to */     NumericVector >::type W(WSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type sizes(sizesSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type xInit(xInitSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type yInit(yInitSEXP);
+    Rcpp::traits::input_parameter< LogicalVector >::type Cx(CxSEXP);
+    Rcpp::traits::input_parameter< LogicalVector >::type Cy(CySEXP);
+    Rcpp::traits::input_parameter< int >::type digits(digitsSEXP);
+    rcpp_result_gen = Rcpp::wrap(layout_with_coulomb_Cpp(pniter, pvcount, pecount, maxdelta, parea, pcoolexp, prepulserad, pcoulombrad, Ef, Et, W, sizes, xInit, yInit, Cx, Cy, digits));
+    return rcpp_result_gen;
+END_RCPP
+}
 // qgraph_layout_Cpp
 NumericMatrix qgraph_layout_Cpp(int pniter, int pvcount, int pecount, NumericVector maxdelta, double parea, double pcoolexp, double prepulserad, IntegerVector Ef, /* Edges from */     IntegerVector Et, /*Edges t0*/     NumericVector W, NumericVector xInit, NumericVector yInit, LogicalVector Cx, LogicalVector Cy, int digits);
 RcppExport SEXP _qgraph_qgraph_layout_Cpp(SEXP pniterSEXP, SEXP pvcountSEXP, SEXP pecountSEXP, SEXP maxdeltaSEXP, SEXP pareaSEXP, SEXP pcoolexpSEXP, SEXP prepulseradSEXP, SEXP EfSEXP, SEXP EtSEXP, SEXP WSEXP, SEXP xInitSEXP, SEXP yInitSEXP, SEXP CxSEXP, SEXP CySEXP, SEXP digitsSEXP) {
@@ -37,6 +64,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_qgraph_layout_with_coulomb_Cpp", (DL_FUNC) &_qgraph_layout_with_coulomb_Cpp, 17},
     {"_qgraph_qgraph_layout_Cpp", (DL_FUNC) &_qgraph_qgraph_layout_Cpp, 15},
     {NULL, NULL, 0}
 };
